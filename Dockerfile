@@ -8,6 +8,6 @@ RUN apt-get install monit -y --force-yes
 RUN mv /etc/monit /etc/monit.orig
 ADD etc_monit /etc/monit
 RUN chown -R root:root /etc/monit/monitrc
-RUN chmod 700 /etc/monit/monitrc
+RUN chmod 600 /etc/monit/monitrc
 
 CMD ["/usr/bin/monit", "-I"]
